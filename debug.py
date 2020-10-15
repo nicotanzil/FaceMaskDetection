@@ -50,4 +50,7 @@ labels = to_categorical(labels)
 data = np.array(data, dtype="float32")
 labels = np.array(labels)
 
-(trainX, testX, trainY, testY) = train_test_split()
+(trainX, testX, trainY, testY) = train_test_split(data, labels,
+                                                  test_size=0.20, stratify=labels, random_state=42)
+
+# Test
